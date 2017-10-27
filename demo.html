@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+
+    <link rel="stylesheet" href="css/tooltip.css">
+    <!-- Vizuly specific style sheets -->
+    <link rel="stylesheet" href="lib/styles/vizuly.css">
+    <link rel="stylesheet" href="lib/styles/vizuly_weightedtree.css">
+
+    <script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
+
+    <!-- D3.js ... of course! -->
+    <script src="lib/d3.min.js"></script>
+
+    
+    <script src="lib/vizuly_core.min.js"></script>
+	<script src="lib/vizuly_weightedtree.min.js"></script>
+
+    <script src="rbChart.js"></script>
+
+</head>
+
+<body>
+
+<!-- Our main content container-->
+<div class="container" style="width:100%">
+    <div id="viz_container" class="z-depth-3" style="margin: 0 auto;"></div>
+</div>
+
+<script>
+    
+    $(document).ready(function () {
+        
+        var jsonData = [{"key":"하고","values":[{"key":"뉴시스","size":10.588235294117647},{"key":"댓글","size":9.404255319148936},{"key":"금융위원회_주관","size":5.739130434782608},{"key":"전략포럼","size":4.5},{"key":"박진희","size":4},{"key":"임종룡","size":3}]},{"key":"MOU","values":[{"key":"KCB","size":3.5294117647058822},{"key":"가계부채","size":3.4285714285714284},{"key":"통계청","size":3.4285714285714284}]},{"key":"업무협약","values":[{"key":"신한카드","size":8.31111111111111},{"key":"신한은행","size":7.0588235294117645},{"key":"제주도","size":6.545454545454546}]},{"key":"IoT","values":[{"key":"사물인터넷","size":8.210526315789474},{"key":"클라우드","size":7.764705882352941}]},{"key":"SK텔레콤","values":[{"key":"T맵","size":6.666666666666666},{"key":"O2O","size":5.333333333333333},{"key":"SK플래닛","size":4},{"key":"사업분야","size":4},{"key":"위치기반서비스","size":4}]},{"key":"SNS_클릭","size":7.333333333333334},{"key":"핀테크","size":6.857142857142858},{"key":"경기도","values":[{"key":"전문가","size":5.310344827586206}]},{"key":"김형준_연구위원","size":5.333333333333333},{"key":"사회과학자_최진기","size":5.333333333333333},{"key":"고객들","size":4.666666666666667},{"key":"사용자","size":4.666666666666667},{"key":"임종룡_금융위원장","size":4.5},{"key":"삼성카드","size":3.7333333333333334},{"key":"차별화","size":3.5294117647058822},{"key":"음악_추천_서비스","size":3.428571428571429}];
+
+        rbChart.makeChart({
+            container: "#viz_container",
+            data: jsonData
+        });
+
+    });
+
+</script>
+
+
+</body>
+
+
+</html>
